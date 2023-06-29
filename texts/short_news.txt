@@ -1,0 +1,31 @@
+ BlockFi confirms unauthorized access to client data hosted on Hubspot ::As a third-party vendor for BlockFi, Hubspot stored user data such as names, email addresses and phone numbers, which has been historically used for conducting phishing attacks.
+ 
+..! NFT collections brought to life at SXSW: Doodles and FLUF World ::Interviews with the founding teams of Doodles and FLUF World NFT communities revealed how the digital and physical worlds can interact with each other.  
+ 
+..! 14% of Salvadoran businesses have transacted in BTC: Chamber of Commerce  ::El Salvador made history in September 2021 by becoming the first country to officially recognize Bitcoin as a legal tender.  
+ 
+..! Binance tells regulators it will cease operations in Ontario... for real this time ::The crypto exchange admitted to operating in the province without registration after saying it would stop.
+ 
+..! Vitalik Buterin talks crypto’s perils in Time Magazine interview  ::The “prince of crypto,” as Vitalik is referred to in the magazine, said the cryptocurrency industry has an image problem.  
+ 
+..! Central Bank of Russia tightens P2P transactions monitoring, including those in crypto ::The regulator’s recommendation is designed to prevent capital flight amid economic collapse.
+ 
+..! Qatar exploring digital banks and central bank digital currencies ::The central bank is expected to set a direction for its future focus soon, particularly on various fintech verticals. 
+ 
+..! $1 million rock NFT sells for a penny in all ore nothing error ::A simple mistake led one crypto user to sell his precious rock NFT for 444 WEI instead of 444 ETH, a tenth of a penny rather than $1.2 million. 
+ 
+..! Ukraine’s largest savings bank halts Bitcoin buys with hryvnia — Report ::Despite Ukraine progressing with crypto regulation, locals are reportedly unable to buy Bitcoin using their bank accounts at PrivatBank.
+ 
+..! Miners that hodl the most Bitcoin are ‘relentlessly expanding’ ::According to a series of mining metrics, not only are miners holding hard but they’re also dramatically increasing their hash rate.
+ 
+..! Australian competition regulator takes Meta to court over fake crypto ads  ::The ACCC highlighted unapproved or endorsed “scam” ads featuring prominent Australian figures such as entrepreneur Dick Smith, TV host David Koch and former NSW premier Mike Baird, in particular. 
+ 
+..! Rare Bears Discord phishing attack nabs $800K in NFTs  ::The account of a moderator from the nonfungible token project was compromised in the attack, posting a phishing link that drained user wallets.
+ 
+..! Coinbase Wallet adds support for Solana ::Coinbase has added wallet support for SOL and Solana-based tokens and has outlined that it will look to support NFTs and DApps on the blockchain in the future too.  
+ 
+..! GameStop looks toward NFT marketplace launch after big Q4 loss ::The firm also highlighted that the Immutable X NFT marketplace deal is set to fetch the firm $150 million worth of IMX tokens upon the “achievement of certain milestones.”
+ 
+..! Blockchain tracking sweetens the pay of Ghana‘s cocoa farmers ::Koa aims to help Ghanian farmers increase their pay while allowing cocoa consumers to know exactly where their beans are coming from.
+ 
+..!
