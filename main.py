@@ -1,6 +1,7 @@
 import os
 import telebot
-from binance.exceptions import BinanceAPIException
+# from b in ance   exceptions Bin ance APIException
+from pybit.exceptions import InvalidRequestError as IRE
 from dotenv import load_dotenv
 from extras import START_MSG_CONTENT, SARCASTIC_MSG, get_crypto, gaming, image_gen, client
 from random import choice
@@ -72,8 +73,8 @@ def ping(message):
     bot.reply_to(message, f"""I'm alive 👀😁 the time is {result['timenow']}...😉😎😎
     hey {message.from_user.username}\n\n
 {coin} current price is: {result['price']} 📊 \nThe percentage today is :{result['price_change']} %\n\n
-The Current Volume being traded on Binance is {result['vol']} {coin}.
-Amountuing to: {result['quote']} USDT 🐳💸""")
+The Current Volume being traded on Bybit is {result['vol']} {coin}.
+24hr low: {result['low24h']} USDT 🐳💸""")
     print(f'{message.text} called')
 
 @bot.message_handler(commands=['members'])
@@ -106,8 +107,8 @@ def joke(message):
 #id_list=[1806862179, 2106703150,1871663191]
 #k=[bot.send_message(i,f'Hello @Fundsman ... 😂💀 {choice(all_sjk)}😂🤣💀💀') for i in id_list]
 
-    #binance_timestamp=client.get_server_time()
-    #pinging = str(datetime.fromtimestamp(binance_timestamp['serverTime']/1000)).split('.')[0]
+    #bin ance_timestamp=client.get_server_time()
+    #pinging = str(datetime.fromtimestamp(bin ance_timestamp['serverTime']/1000)).split('.')[0]
 #-------------------------------------------------------------------------
 #########***** ----- ALL BOT MESSAGE CHECK STARTS HERE -----*****#########
 
@@ -144,8 +145,8 @@ def pair_msg(message):
             "No pair given ⚠  try using price followed by the symbol, e.g price btcusdt")
     pair = pairs[1].upper()
     try:
-        info = client.get_klines(symbol=pair, interval='2h', limit=1 )
-        info0 = info[0]
+        info = client.get_kline(category='spot', symbol=pair, interval=120, limit=1 )
+        info0 = info['result']['list'][0]
         bot.reply_to(message, 
             f"""hey @{message.from_user.username},
 the last 2 hr candle for {pair} has:\n
@@ -155,9 +156,9 @@ low: {info0[3]} 📉 \n
 close: {info0[4]}📊 \n
 volume traded: {info0[5]} 🐳 \n
 and No. of {pairs[1].split()[0]}
-traded on Binance 1hr ago: {info0[8]} 💸💷""")
-    except BinanceAPIException as error_found:
-        if error_found.message == "Invalid symbol.":
+traded on Bybit 2hrs ago: {info0[6]} 💸💷""")
+    except IRE as error_found:
+        if error_found.message == "Not supported symbols":
             bot.reply_to(message,
                 f'''{pair} is not a valid currency 🔎 \n
                 or it\'s not available in our database'''

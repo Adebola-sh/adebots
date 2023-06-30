@@ -1,2 +1,4 @@
 /auth.env
 /botenv
+__pycache__/
+/__pycache__/extras.cpython-311.pyc

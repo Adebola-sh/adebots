@@ -1,7 +1,8 @@
 import os
 import requests
 import telebot
-from binance.client import Client
+# from bi na nce client  Client
+from pybit.unified_trading import HTTP
 from datetime import datetime
 from dotenv import load_dotenv
 from time import sleep
@@ -13,7 +14,10 @@ from time import sleep
 load_dotenv('auth.env')
 API_key=os.getenv('key')
 bot=telebot.TeleBot(API_key)
-client=Client()
+key = os.getenv('Bybit_Api_Key')
+secret = os.getenv('Bybit_Api_Secret')
+# client=Client()
+client = HTTP(testnet = False, api_key=key, api_secret=secret)
 
 
 # ========= Useful Variables ========= #
@@ -37,20 +41,21 @@ SARCASTIC_MSG = '''how many times do you want to start? 😂 \n
 
 # ========= Important Functions ========= #
 def get_crypto(pair):
-    """"This function gets Cryptocurrency prices from Binance server.
+    """"This function gets Cryptocurrency prices from Bybit server.
     It doesnt have so much use, maybe it will in the future."""
-    info = client.get_ticker(symbol=str(pair).upper())
+    info = client.get_tickers(symbol=str(pair).upper(), category= 'spot')
+    info = info['result']['list'][0]
     info1= info['symbol']
     price = info['lastPrice']
-    change = info['priceChangePercent']
-    vol = round(float(info['volume']),3)
-    quote = round(float(info['quoteVolume']),1)
+    change = info['price24hPcnt']
+    vol = round(float(info['volume24h']),3)
+    low24h = round(float(info["lowPrice24h"]),1)
     d= datetime.now()
     timenow=d.strftime('%A %X %p')
     return {
         'info': info, 'info1': info1,
         'price':price, 'price_change':change,
-        'vol': vol, 'quote': quote, 'cur_time': d,
+        'vol': vol, 'quote': low24h, 'cur_time': d,
         'timenow': timenow
         }
 
