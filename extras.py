@@ -55,7 +55,7 @@ def get_crypto(pair):
     return {
         'info': info, 'info1': info1,
         'price':price, 'price_change':change,
-        'vol': vol, 'quote': low24h, 'cur_time': d,
+        'vol': vol, 'low24h': low24h, 'cur_time': d,
         'timenow': timenow
         }
 
